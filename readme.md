@@ -35,16 +35,16 @@ We use a preprocessed subset of HALoGEN prompts and corresponding hallucination 
 
 `./halu_results`
 
-(The preprocess script is `python 1_data_prepare.py`)
+(The preprocess script is `python data_preprocess.py`)
 
 #### 📈 Evaluation
 
 To evaluate a model on the benchmark dataset:
-	1.	Add your OpenAI API key to ./key.py.
+	1.	Add your OpenAI API key to `./key.py`.
 	2.	Run the following command:
 
 ```
-python 2_run_session_benchmark.py \
+python run_benchmark.py \
     --halo_type {dataset} \
     --model_name {model_name} \
     --num_perturbations 1024 \
