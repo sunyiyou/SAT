@@ -8,4 +8,4 @@ model = AutoModelForCausalLM.from_pretrained(
 )
 
 embeddings = model.get_input_embeddings().weight.detach().cpu().numpy()
-np.save("/home/weichenzhang/hallucination/SAT/utils/llama_embedding.npy", embeddings)
+np.save("llama_embedding.npy", embeddings)
