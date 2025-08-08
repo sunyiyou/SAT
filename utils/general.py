@@ -184,6 +184,8 @@ def has_substring(string_list, main_string):
 
 
 def has_subseq(seq_list, main_string):
+    if isinstance(seq_list, str):
+        seq_list = [seq_list]
     for seq in seq_list:
         if isinstance(seq, str):
             if seq.lower() in main_string.lower():

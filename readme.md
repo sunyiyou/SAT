@@ -12,7 +12,9 @@ This project investigates hallucinations in large language models (LLMs) by anal
 To set up the required environment, install dependencies from `requirements.txt`:
 
 ```bash
+python3 -m nltk.downloader averaged_perceptron_tagger punkt
 pip install -r requirements.txt
+python3 get_embeddings.py
 ```
 
 ## 🚀 Quick Start
