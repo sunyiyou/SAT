@@ -139,7 +139,7 @@ class Evaluator:
             org_len = len(self.tokenizer.encode(wrapped_filled_texts[0]))
             output_texts = generate_chatgpt_batch(wrapped_filled_texts, client=self.model, model_name=self.model_handle,
                                                max_tokens=max_new_tokens + org_len, workers=25)
-            count = sum([1 for output_text in output_texts if has_subseq(yh, output_text)])
+            count = sum([1 for output_text in output_texts if has_subseq([yh], output_text)])
         else:
             generated_ids = self.generate_outputs(wrapped_filled_texts, max_new_tokens=max_new_tokens)
             count = 0
@@ -149,7 +149,7 @@ class Evaluator:
                 cleaned_tokens = [clean_token(token) for token in generated_tokens]
                 output_text = "".join(cleaned_tokens)
                 output_texts.append(output_text)
-                if has_subseq(yh, output_text):
+                if has_subseq([yh], output_text):
                     count += 1
         if return_texts:
             return count / test_sentence_num, list(zip(filled_texts, output_texts))

@@ -202,7 +202,7 @@ if __name__ == '__main__':
             # Step 1: Prompt and generation
             prompt_text = prompt_text.replace(chat_prefix_default, "").replace(chat_suffix_default, "")
             gen_results = analyzer.generate_response(prompt_text, max_new_tokens=max_new_tokens, num_generations=batch_size)
-            indices = [i for i, gen_result in enumerate(gen_results) if has_subseq(target_string, gen_result["output_text"])]
+            indices = [i for i, gen_result in enumerate(gen_results) if has_subseq([target_string], gen_result["output_text"])]
             pyh = len(indices) / len(gen_results)
             print(f"Target '{target_string}' appeared in {len(indices)} out of {len(gen_results)} outputs. p(yh|s) = {pyh:.2f}")
             freqs.append(pyh)

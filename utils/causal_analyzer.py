@@ -311,7 +311,7 @@ class SubsequenceCausalAnalyzer:
             output_texts = self.batch_generate_perturbed_output(perturbed_seqs, max_new_tokens=128, wrap_with_chat_template=self.chat_mode, do_sample=True)
 
         # 4. Measure how frequently `target_string` appears
-        indices = [i for i, out_text in enumerate(output_texts) if has_subseq(target_string, out_text)]
+        indices = [i for i, out_text in enumerate(output_texts) if has_subseq([target_string], out_text)]
         pyh = len(indices) / len(perturbed_seqs)
         print(f"Target '{target_string}' appeared in {len(indices)} out of {len(perturbed_seqs)} outputs. p(yh) = {pyh:.2f}")
 

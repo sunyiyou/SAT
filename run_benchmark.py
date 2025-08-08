@@ -102,7 +102,7 @@ if __name__ == '__main__':
         if df.loc[index]["freqs"] < 0.1: continue
         cnt +=1
         if cnt > eval_samples_max: break
-        if not has_subseq(target_string, response): break
+        if not has_subseq([target_string], response): break
         analysis_result_file = os.path.join(save_folder, f"{index}_analysis_result.pickle")
         perturb_result_file = os.path.join(save_folder, f"{index}_perturb_result.csv")
 
