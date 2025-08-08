@@ -1,7 +1,7 @@
 
 # Why and How LLMs Hallucinate: Connecting the Dots with Subsequence Associations
 
-This repository contains the source code for [Why and How LLMs Hallucinate: Connecting the Dots with Subsequence Associations](https://arxiv.org/abs/xxx) by **Yiyou Sun, Yu Gai, Lijie Chen, Abhilasha Ravichander, Yejin Choi, and Dawn Song**.
+This repository contains the source code for [Why and How LLMs Hallucinate: Connecting the Dots with Subsequence Associations](https://arxiv.org/abs/2504.12691) by **Yiyou Sun, Yu Gai, Lijie Chen, Abhilasha Ravichander, Yejin Choi, and Dawn Song**.
 
 ## 📌 Overview
 
@@ -63,6 +63,7 @@ If you use our codebase, please cite our work:
   title={Why and How LLMs Hallucinate: Connecting the Dots with Subsequence Associations},
   author={Sun, Yiyou and Gai, Yu and Chen, Lijie and Ravichander, Abhilasha and Choi, Yejin and Song, Dawn},
   journal={arxiv},
+  url={https://arxiv.org/abs/2504.12691},
   year={2025}
 }
 ```
